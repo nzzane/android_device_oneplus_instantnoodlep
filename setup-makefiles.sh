@@ -8,8 +8,11 @@
 
 set -e
 
+# Required!
 export DEVICE=instantnoodlep
 export DEVICE_COMMON=sm8250-common
 export VENDOR=oneplus
+
+export DEVICE_BRINGUP_YEAR=2020
 
 "./../../${VENDOR}/${DEVICE_COMMON}/setup-makefiles.sh" "$@"
