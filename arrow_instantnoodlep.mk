@@ -21,14 +21,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from instantnoodlep device
 $(call inherit-product, device/oneplus/instantnoodlep/device.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit Carbon product configuration
 $(call inherit-product, vendor/arrow/config/common.mk)
+
+TARGET_INCLUDE_WIFI_EXT := true
+
+# Customization
+$(call inherit-product, vendor/google-customization/config.mk)
 
 PRODUCT_NAME := arrow_instantnoodlep
 PRODUCT_DEVICE := instantnoodlep
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := IN2023
+PRODUCT_MODEL := ONEPLUS IN2023
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
